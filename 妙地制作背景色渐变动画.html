@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 通过 background-position 模拟渐变动画 */
+        #demo0 {
+            position: relative;
+            width: 500px;
+            height: 100px;
+            margin: 20px auto;
+            background: #ffc700;
+            animation: gradientChange 3s infinite alternate;
+        }
+
+        @keyframes gradientChange  {
+            100% {
+                background: #e91e1e;
+            }
+        }
+
+        /* 通过 background-size 模拟渐变动画 */
+        #demo1 {
+            position: relative;
+            width: 300px;
+            height: 100px;
+            margin: 20px auto;
+            background: linear-gradient(90deg,  #ffc700 0%, #e91e1e 33%, #6f27b0 66%, #00ff88 100%);
+            background-position: 100% 0;
+            animation: bgSize 5s infinite ease-in-out alternate;
+
+        }
+
+        @keyframes bgSize {
+            0% {
+                background-size: 300% 100%;
+            }
+            100% {
+                background-size: 100% 100%;
+            }
+        }
+
+        #demo2{
+    position: relative;
+    overflow: hidden;
+    width: 180px;
+    height: 180px;
+    margin: 40px auto;
+    
+    
+}
+
+#demo2::before {
+        content: "";
+        position: absolute;
+        top: -100%;
+        left: -100%;
+        bottom: -100%;
+        right: -100%;
+        background: linear-gradient(45deg,  #ffc700 0%, #e91e1e 50%, #6f27b0 100%);
+        background-size: 100% 100%;
+        animation: bgposition 8s infinite linear alternate;
+        z-index: -1;
+    }
+
+
+@keyframes bgposition {
+    0% {
+        transform: translate(30%, 30%);
+    }
+    25% {
+        transform: translate(30%, -30%);
+    }
+    50% {
+        transform: translate(-30%, -30%);
+    }
+    75% {
+        transform: translate(-30%, 30%);
+    }
+    100% {
+        transform: translate(30%, 30%);
+    }
+}
+
+
+/* 通过滤镜 hue-rotate 实现渐变动画 */
+
+#demo3{
+    width: 300px;
+    height: 180px;
+    margin: auto;
+    background: linear-gradient(45deg, #ffc107, deeppink, #9c27b0);
+    animation: hueRotate 10s infinite alternate;
+}
+
+@keyframes hueRotate {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* 背景色渐变过渡实现按钮的明暗变化 */
+.btn {
+    margin: 50px auto;
+    width: 200px;
+    line-height: 64px;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    background: linear-gradient(#024e8a 0%, #2d80c1 50%, #83c7fd 100%);
+    background-size: 100% 150%;
+    background-position: 0 0;
+    transition: .3s;
+}
+
+.btn:hover {
+        background-position: 0 75%;
+    }
+    </style>
+</head>
+<body>
+    <!-- 通过 background-position 模拟渐变动画 -->
+    <div id="demo0"></div>
+    <br />
+
+    <!-- 通过 background-size 模拟渐变动画 -->
+    <div id="demo1" ></div>
+    <br />
+
+    <!--  上面两种方式虽然都可以实现，但是总感觉不够自由，或者随机性不够大。
+不仅如此，上述两种方式，由于使用了 background-position 和 background-size，
+并且在渐变中改变这两个属性，导致页面不断地进行大量的重绘（repaint），对页面性能消耗非常严重 -->
+
+
+    <!-- 伪元素配合transform实现背景渐变 -->
+    <div id="demo2" ></div>
+    <br />
+
+    <!-- 通过滤镜 hue-rotate 实现渐变动画 -->
+    <div id="demo3" ></div>
+    <br />
+
+    <!-- 背景色渐变过渡实现按钮的明暗变化 -->
+    背景色渐变过渡实现按钮的明暗变化
+    <div class="btn">Confirm</div>
+
+
+</body>
+</html>

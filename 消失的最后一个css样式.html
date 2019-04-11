@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        li{
+            list-style:none;
+            margin-bottom:10px;
+            display:inline-block;
+        }
+
+        /* 最后一个css效果不生效 */
+        ul > li:not(:last-child)::after {
+            content: ",";
+        }
+
+
+
+        
+    </style>
+</head>
+<body>
+        <ul class="nav">
+                <li>a</li>
+                <li>b</li>
+                <li>c</li>
+                <li>d</li>
+                <li>e</li>
+              </ul>
+
+
+</body>
+</html>

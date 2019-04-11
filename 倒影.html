@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1 {
+            margin: 50px auto;
+            width: 200px;
+            height: 200px;
+            background-image: url('http://images2015.cnblogs.com/blog/608782/201609/608782-20160926101029078-1479229145.jpg');
+            position: relative;
+        }
+
+        /* 倒影 */
+        #div1:before {
+            content: "";
+            background-image: inherit;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            bottom: -100%;
+            transform: rotateX(180deg);
+        }
+
+
+        /* 倒影部分的漂白效果 */
+        #div1:after { 
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            bottom: -200px;
+            background: linear-gradient(0deg, rgba(255, 255, 255, 1)0%, rgba(255, 255, 255, 0)100%);
+            z-index: 2;
+        }
+
+
+
+        #div2 {
+            margin: 50px auto;
+            width: 200px;
+            height: 200px;
+            background-image: url('http://images2015.cnblogs.com/blog/608782/201609/608782-20160926101029078-1479229145.jpg');
+            position: relative;
+            /* box-reflect 有四个方向可以选，below | above | left | right 代表下上左右。 */
+            -webkit-box-reflect: below;
+        }
+
+
+    </style>
+</head>
+<body>
+        <!-- 方法一  这个比较好 使用了inherit(继承) -->
+        <div id='div1' ></div>
+
+        <!-- 方法二  ie浏览器不支持 个人不建议使用 -->
+        <!-- <div id='div2' ></div> -->
+</body>
+</html>

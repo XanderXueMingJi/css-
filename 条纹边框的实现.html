@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #demo {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            background: #9c27b0;
+            border: 20px dashed #2196f3;
+        }
+
+        #demo::after{
+            content:attr(data-msg);
+            position:absolute;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            background:#fff;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id='demo' data-msg="文字写在这里, 只能写简单的文字, 还有文字多了也好溢出来 没有特效什么的 "></div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .main{
+    text-align:justify;
+    text-align-last:justify;
+    }
+    .box{
+    width:50px;
+    height:50px;
+    background:tomato;
+    border-radius:50%;
+    display:inline-block;
+    }
+
+
+    /* 方法二 */
+    .main2{
+  text-align:justify;
+}
+.main2::after{
+  content:'';
+  display:inline-block;
+  width:100%;
+}
+.box2{
+  width:50px;
+  height:50px;
+  background:tomato;
+  border-radius:50%;
+  display:inline-block;
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- 参考网站: https://www.jianshu.com/p/a7e535126286 -->
+    <!-- 方法一 -->
+    <div class="main">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <!-- <div class="box"></div>  
+            <div class="box"></div>  
+            <div class="box"></div>   -->
+          </div>	
+        
+
+
+          <!-- 方法二 -->
+          <div class="main2">
+                <div class="box2"></div>
+                <div class="box2"></div>
+                <div class="box2"></div>
+                <div class="box2"></div>  
+                <div class="box2"></div>  
+                <div class="box2"></div>  
+              </div>
+</body>
+</html>
