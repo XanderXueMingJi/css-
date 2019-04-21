@@ -1,0 +1,29 @@
+.text {
+  margin: 0 auto;
+  width: 500px;
+  line-height: 100px;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  z-index: 1;
+  font-size: 80px;
+  font-weight: bold;
+  background: linear-gradient(90deg, red 0, orange 15%, yellow 30%, green 45%, teal 60%, blue 75%, purple 90%, purple 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: changeColor .5s linear infinite alternate;
+}
+
+@keyframes changeColor {
+  0% {
+    background: linear-gradient(90deg, red 0, orange 15%, yellow 30%, green 45%, teal 60%, blue 75%, purple 90%, purple 100%);
+    -webkit-background-clip: text;
+  }
+  50% {
+    background: linear-gradient(90deg, deeppink 0, yellowgreen 15%, fuchsia 30%, lime 45%, olive 60%, aqua 75%, coral 90%, brown 100%);
+    -webkit-background-clip: text;
+  }
+  100% {
+    background: linear-gradient(-90deg, red 0, orange 15%, yellow 30%, green 45%, teal 60%, blue 75%, purple 90%, purple 100%);
+    -webkit-background-clip: text;
+  }
+}

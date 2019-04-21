@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        .trapezoid{
+            position: relative;
+            width: 60px;
+            padding: 60px;
+        }
+
+        .trapezoid::before{
+            content:"";
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            transform: perspective(20px) scaleY(1.3) rotateX(5deg);
+            transform-origin: bottom;
+            background: yellowgreen;
+        }
+
+
+
+
+        .trapezoid002 {
+            position: relative;
+            width: 60px;
+            border-top: 60px solid yellowgreen;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+        }
+    </style>
+</head>
+<body>
+        <!-- 利用伪元素加旋转透视实现梯形 -->
+    <div class="trapezoid"></div>
+    <br />
+    <!-- 当然，还有另一种更简单的方法是利用border实现，借助上面的构造三角形的方法，在矩形两侧构造两个透明的三角形 -->
+    <div class="trapezoid002"></div>
+
+</body>
+</html>

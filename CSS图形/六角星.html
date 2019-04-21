@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 六角星呢？想象一下，一个向上的三角形 ▲，叠加上一个向下的三角形 ▼，就可以得到一个六边形 */
+        .sixstar {
+            position: relative;
+            width: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid yellowgreen;
+        }
+        .sixstar:after {
+            content: "";
+            position: absolute;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 100px solid yellowgreen;
+            top: 30px;
+            left: -50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sixstar"></div>
+</body>
+</html>

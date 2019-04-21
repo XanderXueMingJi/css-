@@ -1,0 +1,63 @@
+html,
+body,
+.g-father,
+.g-children {
+    padding: 30px;
+    border:1px solid #999;
+}
+
+input {
+    display: block;
+    border: none;
+    outline: none;
+    background: none;
+    border: 1px solid #333;
+    cursor: pointer;
+    margin: 0 auto;
+    
+    &:focus {
+        background: #00bcd4;
+    }
+}
+
+html:focus-within {
+    background: #e91e63;
+}
+
+body:focus-within {
+    background: #ff5722;
+}
+
+.g-father:focus-within {
+    background: #ffeb3b;
+}
+
+.g-children:focus-within {
+    background: #4caf50;
+}
+
+.g-html,
+.g-body,
+.g-fath,
+.g-chil {
+    position: fixed;
+}
+
+.g-html {
+    left: 30px;
+    top: 10px;
+}
+.g-body {
+    left: 60px;
+    top: 40px;
+}
+
+.g-fath {
+    top: 70px;
+    left: 90px;
+}
+
+.g-chil {
+    top: 100px;
+    left: 120px;
+}

@@ -1,0 +1,51 @@
+*{
+	position: relative; 
+}
+
+html {
+	font-weight: 300;
+}
+h1, h2 {
+	background: tomato;
+	font-size: 3rem;
+	line-height: 5rem;
+	color: #fff;
+	shape-outside: content-box;
+	shape-margin: 1rem;
+    margin: 30vh 2rem 0 -30vw;
+	shape-margin: 1rem;
+    float: left;
+	max-width: 60%;
+	border-radius: 1rem;
+}
+h2 {
+	background: cadetblue;
+	float: right;
+    margin: 70vh -29vw 0 0;
+}
+.izq {
+	background: tomato;
+	float: left;
+	width: 30%;
+	height: 100vh;
+    clip-path: polygon(0% 0%, 90% 0%, 10% 100%, 0 100%);
+    shape-outside: polygon(0% 0%, 90% 0%, 10% 100%, 0 100%);
+	shape-margin: 1rem;
+}
+.dch {
+	background: cadetblue;
+	float: right;
+	width: 30%;
+	height: 100vh;
+    clip-path: polygon(90% 0%, 100% 0%, 100% 100%, 10% 100%);
+    shape-outside: polygon(90% 0%, 100% 0%, 100% 100%, 10% 100%);
+	shape-margin: 1rem;
+}
+p {
+	padding: 20px;
+    font-size: 1.4rem;
+    line-height: 2px;
+	// line-heigh: 2;
+	font-weight: 300;
+	text-align: justify;
+}

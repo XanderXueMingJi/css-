@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 多角星再来一个十二级角星。在八角星的基础上，再增加一个矩形，就能得到十二角啦。也就是要过第一个伪元素。 */
+        .twelvestar {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 100px!important;
+            background-color: yellowgreen;
+            transform: rotate(30deg);
+        }
+
+        .twelvestar::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            transform: rotate(30deg);
+            background-color: yellowgreen;
+        }
+
+        .twelvestar::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            transform: rotate(60deg);
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="twelvestar"></div>
+</body>
+</html>

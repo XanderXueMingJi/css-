@@ -1,0 +1,15 @@
+$img: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1493353832&di=c063b6b9c89082e96ffee0766112ffec&imgtype=jpg&er=1&src=http%3A%2F%2Fpic2016.5442.com%3A82%2F2016%2F0111%2F07%2F3.jpg%21960.jpg";
+
+div {
+    margin: auto;
+    width: 400px;
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+    font-size: 180px;
+    font-weight: bold;
+    color: transparent;
+    background: url($img) no-repeat center center;
+    background-size: cover;
+    -webkit-background-clip: text;
+}

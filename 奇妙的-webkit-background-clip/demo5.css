@@ -1,0 +1,44 @@
+div {
+  position: relative;
+  margin: 0 auto;
+  width: 960px;
+  height: 600px;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  background: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1493353832&di=c063b6b9c89082e96ffee0766112ffec&imgtype=jpg&er=1&src=http%3A%2F%2Fpic2016.5442.com%3A82%2F2016%2F0111%2F07%2F3.jpg%21960.jpg") no-repeat center center;
+  background-size: cover;
+  filter: blur(10px);
+  transition: .3s;
+}
+
+p {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 1;
+  font-size: 180px;
+  font-weight: bold;
+  background: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1493353832&di=c063b6b9c89082e96ffee0766112ffec&imgtype=jpg&er=1&src=http%3A%2F%2Fpic2016.5442.com%3A82%2F2016%2F0111%2F07%2F3.jpg%21960.jpg") no-repeat center center;
+  background-size: cover;
+  text-shaodw: 2px 2px 2px 2px #fff;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: move 4s ease-in infinite alternate;
+}
+
+@keyframes move {
+  0% {
+    line-height: 100px;
+    font-size: 100px;
+  }
+  100% {
+    line-height: 600px;
+    font-size: 1500px;
+  }
+}

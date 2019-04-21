@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .pentagon {
+            position: relative;
+            width: 60px;
+            border-bottom: 60px solid yellowgreen;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent; 
+        }
+
+        .pentagon::before {
+            content:"";
+            position: absolute;
+            top: 60px;
+            left: -40px;
+            border-top: 60px solid yellowgreen;
+            border-left: 70px solid transparent;
+            border-right: 70px solid transparent;
+        }
+    </style>
+</head>
+<body>
+        <!-- 梯形加上三角形，很容易就组合成一个五边形，这里需要借助一个伪元素实现： -->
+    <div class="pentagon"></div>
+</body>
+</html>
